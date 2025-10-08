@@ -1,6 +1,10 @@
 /* CSS BY YOUR NAME */
 /* antonio rodriguez jr */
 /* IMPORTED FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 /* IMPORT "INTER" FROM GOOGLE FONTS"
 
 /* CSS RESET */
@@ -64,7 +68,125 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
+
+
+
+
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+
+html{
+    min-width: 400px;
+}
+
+
+header{
+    background-color: var(--black);
+    height:125px;
+    box-shadow: 0 4px 20px 4px var(--blue) ;
+    position:relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+h1{
+    color: var(--blue);
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 2em;
+    position: relative;
+    left: 100px;
+    
+}
+nav{
+    background-color: var(--black);
+    position: relative;
+    left: 250px;
+    top: 10px;
+}
+
+nav ul{
+    width: 55%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    max-height: 0;
+}
+
+nav h2{
+    visibility: hidden;
+    height: 1px;
+}
+
+nav li a{
+    display: block;
+    font-family: var(--font);
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--blue);
+    transition: background-color .3s ease-in;
+}
+
+nav a:hover, nav input:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+
+
+label span{
+    background-color: var(--white);
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+    
+}
+
+label span:before, label span:after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;   
+}
+
+label span:before{
+    top: .75rem;
+}
+
+label span:after{
+    top:-.75rem;
+}
+
+input{
+    display: none;
+}
+
+
+input:checked ~  ul {
+    max-height: 500px;
+}
+
+
+
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -73,6 +195,58 @@ table {
     margin: 0 auto;
 }
 
+#investment h2{
+    color: var(--white);
+    font-size: 2em;
+    font-weight: bold;
+    font-family: var(--font);
+    padding: 20px 15px 20px 15px;
+}
+
+#investment a{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    color: var(--white);
+    border: var(--blue) solid 1px;
+    background-color: var(--blue);
+    padding: 20px 15px 20px 15px;
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#investment p{
+    color: var(--white);
+    font-size: 1em;
+    font-family: var(--font);
+    padding: 2px;
+    line-height: 1.5;
+    
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+
+    25%{
+        transform: translateY(-8px);
+    }
+
+    50%{
+        transform: translateY(8px);
+    }
+
+    75%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 #investment {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
@@ -82,18 +256,174 @@ table {
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    
+
 }
+
+#blur a, #blur h2, #blur p{
+   
+    backdrop-filter: blur(8px);
+  
+}
+
+
+
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
  h1:before{
     content: "";
-
+    display: inline-block;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    position: absolute;
+    left: -80px;
+    top: -8px;
+    animation: float 12s ease-in-out infinite;
+    
+}
+
+
+
+
+
+
+#expertise h2{
+    font-family: var(--font);
+    color: var(--black);
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px 15px 15px 5px;
+    margin-left: 15px;
+}
+
+#expertise p{
+    font-family: var(--font);
+    color: var(--black);
+    line-height: 1.5;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+
+#offer h2{
+    font-family: var(--font);
+    color: var(--black);
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px 5px 15px 5px;
+}
+
+.boxes{
+    background-color: var(--blue);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
+}
+#offer h3{
+    font-family: var(--font);
+    font-size: 1.4em;
+    color: var(--white);
+    padding: 25px 30px 15px 25px;
+    font-weight: bold;
+}
+
+#offer p{
+    font-family: var(--font);
+    color: var(--white);
+    line-height: 1.4;
+    padding: 3px 15px 15px 12px;
+}
+
+#offer{
+    padding-bottom: 40px;
+}
+
+
+#results{
+    background-color: var(--blue);
+}
+
+#results h2{
+    font-family: var(--font);
+    color: var(--white);
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px 5px 15px 15px;
+}
+
+#results p{
+    font-family: var(--font);
+    color: var(--white);
+    line-height: 1.4;
 
 }
+
+#results h3{
+    font-family: var(--font);
+    color: var(--white);
+    padding: 30px 5px 15px 15px;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+
+
+table{
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 50px 15px 10px 15px;
+    width: 440px;
+    height: 200px;
+    
+ 
+    
+}
+table, tr, td, th{
+    border: var(--charcoal) solid 2px;
+    padding: 15px;
+}
+
+#growth{
+    height: 400px;
+    padding-bottom: 20px;
+}
+
+#contact, footer{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+
+
+#contact h2{
+    font-family: var(--font);
+    color: var(--white);
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px 5px 15px 15px;
+}
+
+
+#contact p{
+    font-family: var(--font);
+    line-height: 1.4;
+
+
+}
+
+form{
+    margin: 0 auto;
+}
+
+label + input[type="text"], label + input[type="email"], label + textarea{
+    display: block;
+    
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -113,7 +443,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: width 3s;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -142,7 +472,7 @@ table {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
+@media screen and (min-width:600px){
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -156,6 +486,9 @@ table {
     .bar-chart {
         width: 50%;
     }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width:1200px){
+
+}
