@@ -695,10 +695,14 @@ h2, h3{
     
     nav{
         position: relative;
-        left: 500px;
-        top:-60px;
+        left: 400px;
+        top:-40px;
     }
 
+    h1{
+        top:30px;
+        
+    }
     #expertise p{
        
         font-size: .8em;
