@@ -77,11 +77,11 @@ html{
 
 header{
     background-color: var(--black);
-    position: absolute;
-    height:125px;
+    position: relative;
     box-shadow: 0 4px 20px 4px var(--blue) ;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+   
 }
 
 h1{
@@ -89,23 +89,31 @@ h1{
     font-family: var(--font);
     font-weight: bold;
     font-size: 2em;
-    grid-column: 2/3;
+    position: relative;
+    left: 70px;
+    top: -20px;
       
 }
 nav{
-    grid-column: 3/5;  
+    position: relative;
+    left: 350px;
+    top: -60px;
+    
 }
 
+
 nav ul{
-    display: block;
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: hidden;
     text-align: center;
     max-height: 0;
-    width: 100%;
+    width: 200px;
     background-color: var(--black);
+    position: relative;
+    left: -150px;
+   
 }
 
 nav h2{
@@ -124,12 +132,13 @@ nav li a{
     color: var(--blue);
     transition: background-color .3s ease-in;
    
+   
     
 }
 
 nav a:hover, nav input:hover{
     background-color: var(--blue);
-    color: var(--white);
+    color: var(--black);
 }
 
 nav label {
@@ -235,7 +244,7 @@ input:checked ~  ul {
     }
 }
 
-#investment p, #investment a, #investment h2{
+#investment a, #investment h2{
     animation: loadIn 1s ease-in-out;
 }
 
@@ -246,7 +255,7 @@ input:checked ~  ul {
 
 
     50%{
-        transform: translateY(8px);
+        transform: translateY(25px);
     }
 
     100%{
@@ -266,7 +275,7 @@ input:checked ~  ul {
    
 }
 
-#blur a, #blur h2, #blur p{ 
+#blur { 
     backdrop-filter: blur(8px);
   
 }
@@ -280,7 +289,11 @@ input:checked ~  ul {
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
     animation: float 8s ease-in-out infinite;
-    grid-column: 1/2;
+    margin-right: 15px;
+    margin-top: 20px;
+    position: relative;
+    left: -80px;
+    top: 50px;
 }
 
 #expertise h2{
@@ -312,6 +325,14 @@ input:checked ~  ul {
     background-color: var(--blue);
     border-radius: 10px;
     margin-bottom: 15px;
+    
+}
+
+
+
+.boxes:hover{
+    transform: translateY(-10px);
+    transition: all 1s;
 }
 
 #offer h2{
@@ -336,7 +357,7 @@ input:checked ~  ul {
     font-family: var(--font);
     color: var(--white);
     line-height: 1.2;
-    padding: 3px 15px 15px 12px;
+    padding: 3px 15px 15px 10px;
     font-size: 1em;
 }
 
@@ -345,6 +366,7 @@ input:checked ~  ul {
 #results{
     background-color: var(--blue);
     padding-left: 10px;
+    
 }
 
 #results h2{
@@ -392,10 +414,17 @@ table, tr, td, th{
     padding-bottom: 20px;
     font-family: var(--font);
 }
+#profit-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
 
 form{
     margin: 0 auto;
 }
+
 
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -443,6 +472,9 @@ form{
     animation: stepUp 1s ease-in-out forwards;
 }
 
+
+
+
 #contact, footer{
     background-color: var(--black);
     color: var(--white);
@@ -464,19 +496,27 @@ form{
     line-height: 1.4;
     color: var(--white);
     padding-bottom: 20px;
-    padding-right: 10px;
+    padding-right: 25px;
 }
 
-label + input[type="text"], label + input[type="email"], label + textarea{
+label + input[type="text"], label + input[type="email"]{
     display: block;
     border: var(--blue) solid 3px;
-    padding: 15px 120px 10px 120px;
+    width: 400px;
+    height: 35px;
+}
 
+label + textarea{
+    display: block;
+    border: var(--blue) solid 3px;
+    width: 400px;
+    height: 115px;
 }
 input[type="submit"]{
     display: inline-block;
     margin: 20px 0;
-    padding: 15px 175px 15px 175px;
+    width: 420px;
+    height: 50px;
     color: var(--white);
     background-color: var(--blue);
     font-family: var(--font);
@@ -494,10 +534,15 @@ footer{
     text-align: center;
     line-height: 1.5;
     font-family: var(--font);
+    padding-bottom: 40px;
 }
 
 a[href^="mailto:"]{
     color: var(--blue);
+}
+
+h2, h3{
+    animation: loadIn 1s ease-in-out;
 }
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width:800px){
@@ -534,15 +579,15 @@ a[href^="mailto:"]{
 
     @keyframes floatDown{
         0%{
-            transform: translateY(0);
+            transform: translateY(0px);
         }
 
         50%{
-            transform: translateY(40px);
+            transform: translateY(-40px);
         }
 
-        100% {
-            transform: translateY(0);
+        100%{
+            transform: translateY(0px);
         }
     }
 
@@ -552,13 +597,13 @@ a[href^="mailto:"]{
     h1:before {
         margin-right: 15px;
         padding-right: 10px;
-        animation: floatDown 10s ease-in-out;
+        animation: floatDown 4s ease-in-out infinite;
     }
     nav ul {
         overflow:visible;
-        position:absolute;
-        top: 25px;
-        left:-20px;
+        position:relative;
+        top: -60px;
+        left: -10px;
         grid-column: 3/5;
         display: flex;
         flex-direction: row;
@@ -583,15 +628,16 @@ a[href^="mailto:"]{
 
 
     .boxes{
-        width: 350px;
-        height: 200px;
+        width: 370px;
+        height: 175px;
     }
-}
 
+    .boxes h3{
+        margin-bottom:10px;
+    }
 
 
     #profit-grid{
-        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
@@ -613,46 +659,64 @@ a[href^="mailto:"]{
 
 
 
-    label + input[type="text"], label + input[type="email"], label + textarea{
-            padding: 15px 240px 10px 240px;
+    label + input[type="text"], label + input[type="email"]{
+        width: 700px;
+        height: 45px;
 
+    }
+
+    label + textarea{
+        width: 700px;
+        height: 115px;
     }
 
     input[type="submit"]{
             
-            padding: 15px 310px 15px 310px;
-            font-size: 1.2em;
+        width: 720px;
+        height: 55px;
+    
     }
 
 
+    
+}
 /* MEDIA QUERIES (LARGE) */
  @media screen and (min-width:1024px){
+
+    
     nav{
         position: relative;
-        left: 90px;
+        left: 560px;
+        top:-80px;
     }
 
+    #expertise p{
+        padding-right: 0;
+        font-size: .8em;
+    }
 
     #grid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 5px;
-        
+        margin-right: 0px;
+        margin-left: 30px;
     }
     .boxes{
-        height: 95%;
+        width: 310px;
+        justify-content: center;
     }
-   
+    
     #offer h2{
         padding-bottom: 25px;
     }
 
     table{
-        width: 500px;
+        width: 450px;
     }
 
+    
     #growth{
-        width: 500px;
+        width: 450px;
         padding-left: 20px;
     }
 
@@ -663,24 +727,37 @@ a[href^="mailto:"]{
         padding-bottom: 15px;
     }
 
-    label + input[type="text"], label + input[type="email"], label + textarea{
-            padding: 15px 175px 10px 175px;
+    label + input[type="text"], label + input[type="email"]{
+        width: 420px;
+        height: 45px;
 
+    }
+
+    label + textarea{
+        width: 420px;
+        height: 85px;
     }
 
     input[type="submit"]{
             
-            padding: 15px 240px 15px 240px;
-            
+        width: 450px;
+        height: 55px;
+    
     }
     
 } 
     
 @media screen and (min-width:1400px){
     nav{
-        left:520px;
+        left:1450px;
+        top: -50px;
     }
 
+    h1{
+        top: -10px;
+    }
+
+  
     #offer{
         margin: 10px 200px;
         
@@ -694,8 +771,14 @@ a[href^="mailto:"]{
 
 
 
+    #profit-grid{
+        width: 80vw;
+    }
     #profit, #growth{
-        width: 100%;
+        width: 500px
+    }
+    table{
+        margin-right: 450px;
     }
    
     form{
@@ -703,15 +786,22 @@ a[href^="mailto:"]{
     }
 
 
-    label + input[type="text"], label + input[type="email"], label + textarea{
-            padding: 15px 200px 10px 200px;
+    label + input[type="text"], label + input[type="email"]{
+        width: 650px;
+        height: 45px;
 
+    }
+
+    label + textarea{
+        width: 650px;
+        height: 85px;
     }
 
     input[type="submit"]{
             
-            padding: 15px 280px 15px 280px;
-            
+        width: 650px;
+        height: 55px;
+    
     }
 }
 
