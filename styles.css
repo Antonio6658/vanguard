@@ -701,7 +701,7 @@ h2, h3{
 
     h1{
         top:30px;
-        
+
     }
     #expertise p{
        
@@ -760,6 +760,8 @@ h2, h3{
     
 } 
     
+
+/* This was not required but I wanted to adjust settings for webpage to fit my main monitor full screen. 1920 x 1080 p  */
 @media screen and (min-width:1400px){
     nav{
         left:1450px;
