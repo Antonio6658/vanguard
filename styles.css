@@ -589,7 +589,7 @@ h2, h3{
         }
 
         50%{
-            transform: translateY(30px);
+            transform: translateY(-20px);
         }
 
         100%{
@@ -699,8 +699,8 @@ h2, h3{
         top:-40px;
     }
 
-    h1{
-        top:30px;
+    header h1{
+        top:-20px;
 
     }
     #expertise p{
@@ -764,12 +764,12 @@ h2, h3{
 /* This was not required but I wanted to adjust settings for webpage to fit my main monitor full screen. 1920 x 1080 p  */
 @media screen and (min-width:1400px){
     nav{
-        left:1450px;
-        top: -50px;
+        left:1300px;
+        top: -30px;
     }
 
-    h1{
-        top: -10px;
+    header h1{
+        top: -20px;
     }
 
   
@@ -787,13 +787,14 @@ h2, h3{
 
 
     #profit-grid{
-        width: 80vw;
+        width:100%
     }
     #profit, #growth{
-        width: 500px
+        width:100%
     }
     table{
         margin-right: 450px;
+        width:100%
     }
    
     form{
@@ -804,19 +805,19 @@ h2, h3{
 
 
     label + input[type="text"], label + input[type="email"]{
-        width: 600px;
+        width:100%;
         height: 45px;
 
     }
 
     label + textarea{
-        width: 600px;
+        width:100%;
         height: 85px;
     }
 
     input[type="submit"]{
             
-        width: 600px;
+        width:100%;
         height: 55px;
     
     }
