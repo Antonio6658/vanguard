@@ -764,7 +764,7 @@ h2, h3{
 /* This was not required but I wanted to adjust settings for webpage to fit my main monitor full screen. 1920 x 1080 p  */
 @media screen and (min-width:1400px){
     nav{
-        left:1200px;
+        left:1350px;
         top: -30px;
     }
 
